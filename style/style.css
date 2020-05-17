@@ -7,7 +7,7 @@ li {
     list-style-type: none;
 }
 
-label {
+.answers-item label {
     cursor: pointer;
     border: 2px solid #000;
     border-radius: 0 0 10px 10px;
@@ -15,7 +15,7 @@ label {
     text-align: center;
 }
 
-label:hover {
+.answers-item label:hover {
     border: 2px solid rgba(0,0,0,0.5);
 }
 
@@ -95,4 +95,33 @@ label span {
     color: #E0FFFF !important;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black; 
+}
+
+.burger {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.burger:hover {
+    cursor: pointer;
+}
+.burger span {
+    width: 30px;
+    height: 5px;
+    display: block;
+    background-color: green;
+    border: 2px solid #222222;
+    transition: rotate ,3s, translate .3s;
+}
+
+.burger.active span:nth-chld(1) {
+    transform: rotate(45deg) translate(8px, 14px);
+}
+.burger.active span:nth-chld(2) {
+    opacity: 0;
+}
+.burger.active span:nth-chld(3) {
+    transform: rotate(-45deg) translate(4px, -9px);
 }
